@@ -1,5 +1,5 @@
 package helper
 
 func HelloWorld(name string) string {
-	return "Halo " + name
+	return "Hello " + name
 }
