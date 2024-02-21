@@ -10,6 +10,24 @@ import (
 )
 
 // Benchmark
+func BenchmarkSub(b *testing.B) {
+	b.Run("Tono", func(b *testing.B) {
+		for i := 0; i < b.N; i++ {
+			HelloWorld("Tono")
+		}
+	})
+	b.Run("Jonio", func(b *testing.B) {
+		for i := 0; i < b.N; i++ {
+			HelloWorld("Jonio")
+		}
+	})
+	b.Run("Jono", func(b *testing.B) {
+		for i := 0; i < b.N; i++ {
+			HelloWorld("Jono")
+		}
+	})
+}
+
 func BenchmarkHelloWorld(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		HelloWorld("Anton")
